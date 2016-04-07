@@ -1,6 +1,14 @@
-# Angular-2.0-todo-list
+# Angular 2.0 todo-list
 Sample todo list app written in Angular 2.0 and Materialize CSS
 
+# Installation
+To install the application you must have Git, NodeJS and NPM installed
+
+    $ git clone git@github.com:Paradoxis/Angular-2.0-todo-list.git 
+    $ cd Angular-2.0-todo-list/
+    $ npm install
+    $ npm start
+ 
 # License
 The MIT License (MIT)
 
