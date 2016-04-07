@@ -1,0 +1,63 @@
+<style>
+    .hidden {
+        display: none;
+    }
+    .completed {
+        text-decoration: line-through;
+    }
+    .delete {
+        opacity: 0.5;
+    }
+    .delete:hover {
+        opacity: 1;
+    }
+    [type="checkbox"] + label {
+        top: 4px;
+    }
+</style>
+
+<div class="row">
+    <div class="col s6 offset-s3 input-field">
+        <input placeholder="Title" id="title" type="text" class="validate" #input (keyup.enter)="add(input.value)">
+        <label for="title">Title</label>
+        
+        <table>
+            <tbody>
+                <tr *ngFor="#item of list; #i = index">
+                    <td class="left-align" style="width: 50px;">
+                        <input type="checkbox" name="completed" [checked]="item.status == 'completed'">
+                        <label for="completed" (click)="toggle(i)"></label>
+                    </td>
+                    
+                    <td [ngClass]="item.status">
+                        <p>
+                            {{ item.title }}
+                        </p>
+                    </td>
+                    
+                    <td class="right-align">
+                        <a class="btn-floating btn-small waves-effect waves-light delete" (click)="remove(i)">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    
+    
+<div class="row">
+    <div class="col s3 offset-s3">
+        <button class="btn waves-effect waves-light" type="submit" name="action" (click)="removeCompleted()" *ngIf="list.length != 0">
+            Remove completed            
+        </button>
+    </div>
+    
+    <div class="col s3 right-align">
+        <button class="btn waves-effect waves-light" type="submit" name="action" (click)="removeAll()" *ngIf="list.length != 0">
+            Remove all            
+            <i class="material-icons right">delete</i>
+        </button>
+    </div>
+</div>
