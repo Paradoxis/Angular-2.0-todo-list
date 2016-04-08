@@ -1,6 +1,8 @@
 # Angular 2.0 todo-list
 Sample todo list app written in Angular 2.0 and Materialize CSS
 
+![Todo list sample image](https://raw.githubusercontent.com/Paradoxis/Angular-2.0-todo-list/master/img/todo-list.jpg)
+
 # Installation
 To install the application you must have Git, NodeJS and NPM installed
 
