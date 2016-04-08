@@ -29,7 +29,7 @@ export class TodoList
 
     public removeCompleted(): void
     {
-        var list: TodoItem[] = [];
+        let list: TodoItem[] = [];
 
         this.list.forEach((item) => {
             if (item.status !== "completed") {
